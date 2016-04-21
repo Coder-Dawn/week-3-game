@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Psychic Game</title>
+</head>	
+<body>
+
+    <div id="game">
+        
+    </div>
+    <p>Guess a letter I am thinking of between a and f to start playing</p>
+
+<script type="text/javascript">	
+var $ = function (id) {
+  return documnet.getElementById(id);
+}
+var computerChoices = ['a','b','c','d','e',];
+
+var wins = 0;
+var losses = 0;
+var guessesLeft=10;
+var counter = 0;
+var maxTries = 8;
+var tries = 0;
+var output = " ";
+var display = userGuess;
+var userGuess = computerChoices[computerGuess];
+
+ // This sets the computer guess equal to the random.
+    var computerGuess = computerChoices[Math.floor(Math.random()* computerChoices.length)];
+
+    var psychicGame = function()
+    {
+      for (var i=0; i<computerChoices.length; i++)
+
+       {
+        display[i] = " ";
+        output = output + display[i];
+       } 
+       document.getElementById("game").innerHTML = output;
+       output = " ";
+    }
+
+document.getElementById("game").innerHTML = output;
+guessesLeft--;
+
+if(wins < 1)
+{
+  document.getElementById("userGuess").innerHTML = "You Win";
+}
+  else if (guessesLeft <1)
+  {
+    document.getElementById("userGuess").innerHTML = "You Loose;"
+  }
+  else
+  {
+    document.getElementById("userGuess").innerHTML = "You have" + tries + "guesses Left";
+  }
+
+
+
+   /* if ((userGuess == 'a') || (userGuess == 'b') || (userGuess == 'c') || (userGuess =='d') || (userGuess == 'e')){
+
+
+    if ((userGuess == 'a') && (computerGuess == 'a')){
+            wins++;
+            
+        }else if ((userGuess == 'b') && (computerGuess == 'c')){
+            losses++;
+
+             }else if ((userGuess == 'd') && (computerGuess == 'e')){
+            losses++;
+}
+
+// Taking the tallies and displaying them in HTML
+        /*var html = "<p>Guess what letter I am thing of between a and f to start playing</p>" +
+        "<p>wins: " + 
+        wins + 
+        "</p>" +
+        "<p>losses: " + 
+        losses + 
+        "</p>" +
+        "<p>ties: " + 
+        ties + 
+        "</p>";*/
+
+/*while (userGuess!=computerChoices ){
+ userGuess = prompt("try again");
+counter +=1;
+}
+if(counter>maxtries){
+	
+	document.write("You have no more tries left");
+
+}
+if (userGuess = computerChoices) {
+	documnet.write("Congrats");
+
+}
+ 
+
+/*<div id="game">
+	<p>
+      press r p s to start palying
+	</p>
+
+</div>
+	<script type="text/javascript">*/
+
+/*function startGame (){	
+var guesses = 0;
+var message = "Guess the Letter "
+var letters = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]; 
+var letterToGuess = " ";
+var higherOrLower = " ";
+var lettersGuessed;
+var gameOver = false;
+ 
+
+
+   function initGame() {
+      var letterIndex = Math.floor(Math.random() * letters.length);
+      letterToGuess = letters[letterIndex];
+      guesses = 0;
+      lettersGuessed = [];
+      gameOver = false;
+      window.addEventListener("keyup",eventKeyPressed,true);
+      var formElement = document.
+
+ 	window.addEventListener("keyup",eventKeyPressed, true); */
+
+  // Placing the html into the game ID
+//document.querySelector('#game').innerHTML = html;
+
+
+
+</script>	
+</body>
+</html>
